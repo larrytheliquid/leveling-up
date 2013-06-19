@@ -29,7 +29,7 @@ Code from the paper
   * The generic interfaces [`Generic`](src/Paper/ExtensibleHierarchy.agda#L370) and [`GenericΔ`](src/Paper/ExtensibleHierarchy.agda#L424).
   * Sections 7, 8, 9 and 10 of the paper.
 
-The underlying type theory
+The underlying type system
 --------------------------
 
 * [`TT.DenotationalTerms`](src/TT/DenotationalTerms.agda)
