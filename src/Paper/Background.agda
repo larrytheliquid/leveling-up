@@ -5,7 +5,7 @@ open import Data.Nat
 open import Data.Product
 open import Data.String
 open import Function
-module Background where
+module Paper.Background where
 
 mutual
   data Type : Set where

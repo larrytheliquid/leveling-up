@@ -5,7 +5,7 @@ open import Data.Nat
 open import Data.Product
 open import Data.String
 open import Function
-module HList where
+module Paper.HList where
 
 ----------------------------------------------------------------------
 

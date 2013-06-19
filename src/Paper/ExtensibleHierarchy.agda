@@ -6,7 +6,7 @@ open import Data.Product
 open import Data.String
 open import Function
 open import Relation.Binary.PropositionalEquality
-module ExtensibleHierarchy where
+module Paper.ExtensibleHierarchy where
 
 ----------------------------------------------------------------------
 
