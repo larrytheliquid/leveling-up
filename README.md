@@ -5,8 +5,8 @@ Agda source code accompanying the draft paper (submitted to DTP 2013):
 
 [Leveling Up Dependent Types - Generic programming over a predicative hierarchy of universes.](http://bit.ly/10chSXL)
 
-Table of Contents
------------------
+Code from the paper
+-------------------
 
 * [`Paper.Background`](src/Paper/Background.agda)
   * A typical, small IR dependently typed universe.
@@ -28,6 +28,10 @@ Table of Contents
   * The generic definition of [`show`](src/Paper/ExtensibleHierarchy.agda#L100), [`double`](src/Paper/ExtensibleHierarchy.agda#L254), and [`δouble`](src/Paper/ExtensibleHierarchy.agda#L311).
   * The generic interfaces [`Generic`](src/Paper/ExtensibleHierarchy.agda#L370) and [`GenericΔ`](src/Paper/ExtensibleHierarchy.agda#L424).
   * Sections 7, 8, 9 and 10 of the paper.
+
+The underlying type theory
+--------------------------
+
 * [`TT.DenotationalTerms`](src/TT/DenotationalTerms.agda)
   * A denotational semantics for terms, or terms with an implicit context.
 * [`TT.OperationalTerms`](src/TT/OperationalTerms.agda)
