@@ -25,7 +25,7 @@ Code from the paper
   * Section 7.1 of the paper.
 * [`Paper.ExtensibleHierarchy`](src/Paper/ExtensibleHierarchy.agda)
   * The hierarchical universe, extended with the [`Desc`](src/Paper/ExtensibleHierarchy.agda#L21) construction.
-  * The generic definition of [`show`](src/Paper/ExtensibleHierarchy.agda#L100), [`double`](src/Paper/ExtensibleHierarchy.agda#L254), and [`δouble`](src/Paper/ExtensibleHierarchy.agda#L311).
+  * The generic definitions of [`show`](src/Paper/ExtensibleHierarchy.agda#L100), [`double`](src/Paper/ExtensibleHierarchy.agda#L254), and [`δouble`](src/Paper/ExtensibleHierarchy.agda#L311).
   * The generic interfaces [`Generic`](src/Paper/ExtensibleHierarchy.agda#L370) and [`GenericΔ`](src/Paper/ExtensibleHierarchy.agda#L424).
   * Sections 7, 8, 9 and 10 of the paper.
 
