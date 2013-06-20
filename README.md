@@ -9,7 +9,7 @@ Code from the paper
 -------------------
 
 * [`Paper.Background`](src/Paper/Background.agda)
-  * A typical, small IR dependently typed universe.
+  * A typical, IR dependently typed universe without a hierarchy.
   * Section 2 of the paper.
 * [`Paper.FixedHierarchy`](src/Paper/FixedHierarchy.agda)
   * A dependently typed universe with some base types and a universe hierarchy.
