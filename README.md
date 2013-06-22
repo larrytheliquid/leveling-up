@@ -39,4 +39,13 @@ The underlying type system
   * This extends [McBride's type-safe syntax and evaluation](https://personal.cis.strath.ac.uk/conor.mcbride/pub/DepRep/DepRep.pdf) to include a universe hierarchy.
   * Compared to McBride's types and terms, here the types and terms (and descriptions) are in a single grammar/datatype.
 
+Extra examples of generic functions over indexed types
+------------------------------------------------------
+
+* [`TT.FixedHierarchy`](src/Extras/FixedHierarchy.agda)
+  * A fixed dependently typed universe with some indexed types in it.
+  * Contains examples of applying a generic [double](src/Extras/FixedHierarchy.agda#L81) over indexed types. Applying generic functions to dependent types changes the result type, prefixing them by Π's that act as "preconditions" that are used to preserve type correctness. 
+  * Generically double the dependent function [`fun](src/Extras/FixedHierarchy.agda#L156) and get results out by satisfying its generated preconditions.
+  * Generically double the pair function [`pair](src/Extras/FixedHierarchy.agda#L187) and get results out by satisfying its generated preconditions.
+
 
