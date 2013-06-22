@@ -42,7 +42,7 @@ The underlying type system
 Extra examples of generic functions over indexed types
 ------------------------------------------------------
 
-* [`TT.FixedHierarchy`](src/Extras/FixedHierarchy.agda)
+* [`Extras.FixedHierarchy`](src/Extras/FixedHierarchy.agda)
   * A fixed dependently typed universe with some indexed types in it.
   * Contains examples of applying a generic [double](src/Extras/FixedHierarchy.agda#L81) over indexed types. Applying generic functions to dependent types changes the result type, prefixing them by Π's that act as "preconditions" that are used to preserve type correctness. 
   * Generically double the dependent function [`fun](src/Extras/FixedHierarchy.agda#L156) and get results out by satisfying its generated preconditions.
