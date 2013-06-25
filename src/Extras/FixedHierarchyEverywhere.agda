@@ -101,9 +101,11 @@ everyType ℓ act (`Σ A B) =
   `Π A (λ a → B a `→ B (f (every ℓ act A a))) `→ 
   `Σ (everyType ℓ act A) λ a →
   everyType ℓ act (B (f a))
-everyType ℓ act (`Id A x y) = `Id (everyType ℓ act A) (every ℓ act A x) (every ℓ act A y)
+everyType ℓ act (`Id A x y) =
+  `Id (everyType ℓ act A) (every ℓ act A x) (every ℓ act A y)
+everyType (suc ℓ) act `⟦ A ⟧ =
+  `⟦ everyType ℓ (λ B b → act `⟦ B ⟧ b) A ⟧
 everyType zero act `⟦ () ⟧
-everyType (suc ℓ) act `⟦ A ⟧ = `⟦ everyType ℓ (λ B b → act `⟦ B ⟧ b) A ⟧
 everyType ℓ act `⊥ = `⊥
 everyType ℓ act `⊤ = `⊤
 everyType ℓ act `Bool = `Bool
@@ -114,34 +116,37 @@ every ℓ act (`Fin n) i = λ f → act (`Fin (act `ℕ n)) (f i)
 every ℓ act (`Even n) i = λ f → act (`Even (act `ℕ n)) (f i)
 every ℓ act (`Odd n) i = λ f → act (`Odd (act `ℕ n)) (f i)
 
-every ℓ act (`Π A B) f = λ g a → every ℓ act (B (g a)) (f (g a))
+every ℓ act (`Π A B) f = λ g → act
+  (`Π (everyType ℓ act A) (λ a′ → everyType ℓ act (B (g a′))))
+  (λ a → every ℓ act (B (g a)) (f (g a)))
 
-every ℓ act (`Σ A B) (a , b) = 
-  λ f g →
-  every ℓ act A a ,
-  every ℓ act (B (f (every ℓ act A a))) (g a b)
+every ℓ act (`Σ A B) (a , b) = λ f g → act
+  (`Σ (everyType ℓ act A) (λ a′ → everyType ℓ act (B (f a′))))
+  (every ℓ act A a ,
+   every ℓ act (B (f (every ℓ act A a))) (g a b))
 
-every zero act `⟦ () ⟧ a
 every (suc ℓ) act `⟦ A ⟧ a = act
   (everyType (suc ℓ) act `⟦ A ⟧)
   (every ℓ (λ B b → act `⟦ B ⟧ b) A a)
+every zero act `⟦ () ⟧ a
 
-every ℓ act (`Id A .a a) refl = refl
-
-every zero act `Type ()
 every (suc ℓ) act `Type A = act `Type
   (everyType ℓ (λ B b → act `⟦ B ⟧ b) A)
+every zero act `Type ()
 
 every ℓ act `⊥ ()
 every ℓ act `⊤ tt = tt
 every ℓ act `Bool b = act `Bool b
 every ℓ act `ℕ n = act `ℕ n
+every ℓ act (`Id A .a a) refl = refl
 
 ----------------------------------------------------------------------
 
 `double : (ℓ : ℕ) → ⟦ suc ℓ ∣
   `Π `Type (λ A → `⟦ A ⟧ `→ `⟦ A ⟧) ⟧
 `double ℓ `ℕ n = n + n
+`double zero `⟦ () ⟧ a
+`double (suc ℓ) `⟦ A ⟧ a = `double ℓ A a
 `double ℓ A a = a
 
 ----------------------------------------------------------------------
