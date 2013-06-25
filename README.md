@@ -50,6 +50,6 @@ Extra examples of generic functions over indexed types
 * [`Extras.FixedHierarchyEverywhere`](src/Extras/FixedHierarchyEverywhere.agda) **WARNING: CONTAINS OMGBBQ AWESOME!**
   * Mostly the same as `Extras.FixedHierarchy`.
   * Defines the fully-generic mapping combinator [`every`](src/Extras/FixedHierarchyEverywhere.agda#L82).
-  * Apply `every` to a simple [`double`](src/Extras/FixedHierarchyEverywhere.agda#L142) function, and the double function will be applied to nested values on your behalf!
-  * The same [`fun`](src/Extras/FixedHierarchyEverywhere.agda#L178-L184) and [`pair`](src/Extras/FixedHierarchyEverywhere.agda#L209-L213) examples are given, but using the new `every` combinator.
+  * Apply `every` to a simple [`double`](src/Extras/FixedHierarchyEverywhere.agda#L145) function, and the double function will be applied to nested values on your behalf!
+  * The same [`fun`](src/Extras/FixedHierarchyEverywhere.agda#L183-L189) and [`pair`](src/Extras/FixedHierarchyEverywhere.agda#L214-L218) examples are given, but using the new `every` combinator.
 
