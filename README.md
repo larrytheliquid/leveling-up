@@ -46,7 +46,7 @@ Extra examples of generic functions over indexed types
   * A fixed dependently typed universe with some indexed types in it.
   * Contains examples of applying a generic [double](src/Extras/FixedHierarchy.agda#L81) over indexed types. Applying generic functions to dependent types changes the result type, prefixing them by Π's that act as "preconditions" that are used to preserve type correctness. 
   * Generically double the dependent function [`fun](src/Extras/FixedHierarchy.agda#L156) and get results out by satisfying its generated preconditions.
-  * Generically double the pair function [`pair](src/Extras/FixedHierarchy.agda#L187) and get results out by satisfying its generated preconditions.
+  * Generically double the dependent pair [`pair](src/Extras/FixedHierarchy.agda#L187) and get results out by satisfying its generated preconditions.
 * [`Extras.FixedHierarchyEverywhere`](src/Extras/FixedHierarchyEverywhere.agda) **WARNING: CONTAINS OMGBBQ AWESOME!**
   * Mostly the same as `Extras.FixedHierarchy`.
   * Defines the fully-generic mapping combinator [`every`](src/Extras/FixedHierarchyEverywhere.agda#L82).
