@@ -1,9 +1,9 @@
-Leveling Up Dependent Types
+[Leveling Up Dependent Types](https://github.com/larrytheliquid/leveling-up)
 ===========================
 
-Agda source code accompanying the draft paper (submitted to DTP 2013):
+Agda source code accompanying the paper (DTP 2013):
 
-[Leveling Up Dependent Types - Generic programming over a predicative hierarchy of universes.](http://bit.ly/10chSXL)
+[Leveling Up Dependent Types - Generic programming over a predicative hierarchy of universes. (Draft)](http://bit.ly/10chSXL)
 
 Code from the paper
 -------------------
